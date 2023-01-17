@@ -15,10 +15,10 @@ const generatePalindrome = (str) => {
   let results = ['', '', ''];
   for (const [ch, count] of Object.entries(charsMap)) {
     if (!isEven(count)) {
-      if (results[0] !== '') return null;
-      results[0] = ch.repeat(count);
+      if (results[1] !== '') return null;
+      results[1] = ch.repeat(count);
     } else {
-      results[1] += ch.repeat(count / 2);
+      results[0] += ch.repeat(count / 2);
       results[2] += ch.repeat(count / 2);
     }
   }
